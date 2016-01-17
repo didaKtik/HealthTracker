@@ -12,7 +12,7 @@ Open localhost:8000 in a web browser and the page should open!
 
 ## Usage
 
-This app gives you the possibility to track the calories of a various foods. It uses the [Nutritionix API] (http://www.nutritionix.com/).
+This app gives you the possibility to track the calories of a various foods. It uses the [Nutritionix API] (https://developer.nutritionix.com/).
 
 This is a basic version with few functionalities: you can search for foods, store particular food items, visualize the ones you have stored and delete the ones you don't eat anymore. Many improvements could be made, but the app is structured with Backbone in a way that makes it easy to add new functionalities.
 

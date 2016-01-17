@@ -1,0 +1,7 @@
+node_modules
+
+# A “/“ in the pattern: wildcard does not match “/“
+*/img
+
+# No “/“ in the pattern: wildcard matches anything, even “/“
+*.DS_Store

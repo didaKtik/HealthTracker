@@ -63,7 +63,7 @@ var app = app || {};
 		},
 
 		onError: function (response) {
-			this.trigger('noResults');
+			this.trigger('queryError');
 		}
 	});
 

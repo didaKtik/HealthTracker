@@ -11,8 +11,17 @@ var app = app || {};
 
 		el: '#list-view',
 
+		theadHtml: 
+			'<tr>' +
+    			'<th>Food</th>' +
+    			'<th>Restaurant</th>' +
+    			'<th>Calories</th>' +
+    			'<th></th>' +
+  			'</tr>',
+
 		render: function (collection) {
 			this.$el.html('');
+			this.$el.append(this.theadHtml);
 
 			var View = collection === app.foods ? 'FoodView' : 'ResultView';
 			collection.each(function (food) {

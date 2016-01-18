@@ -91,11 +91,15 @@ var app = app || {};
 		// warn is given memory so that at the end of a warning the bar
 		// returns to the state it add before the warning begins
 		warn: function (text, duration) {
-			var duration = duration || 1500;
+			var defaultDuration = 1500;
+			var duration = duration || defaultDuration;
+
 			var state = this.getState();
+
 			this.message(text);
 			this.$el.removeClass('messaging');
 			this.$el.addClass('warning');
+			
 			setTimeout(function () {
 				this.$el.removeClass('warning');
 				this.setState(state);

@@ -29,6 +29,7 @@ var app = app || {};
 			this.listenTo(app.barView, 'empty', this.unsetAddMode);
 			this.listenTo(app.results, 'reset', this.renderResults);
 			this.listenTo(app.results, 'noResults', this.onNoResults);
+			this.listenTo(app.results, 'queryError', this.onQueryError);
 			this.listenTo(Backbone, 'resultClick', this.onResultClick);
 		},
 
@@ -88,8 +89,13 @@ var app = app || {};
 		},
 
 		onNoResults: function () {
-			app.reset();
+			this.activate();
 			app.barView.warn('No results found !');
+		},
+
+		onQueryError: function () {
+			this.activate();
+			app.barView.warn('Are you connected ?');
 		},
 
 		renderResults: function (results) {

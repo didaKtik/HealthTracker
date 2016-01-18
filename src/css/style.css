@@ -148,9 +148,13 @@ th, td {
   padding: 8px;
 }
 
+th:last-child {
+  padding: 0;
+}
+
 th {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #fad201;
+  color: #222;
 }
 
 .food:nth-child(even), .result:nth-child(even) {

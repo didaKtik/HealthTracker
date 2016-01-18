@@ -128,7 +128,10 @@ gulp.task('cleanDist', function () {
 gulp.task('populateDist', ['cleanDist'], function () {
 	var options = { recursive: true };
 	// cp(imgSrc, imgDist, options);
-	cp(cssSrc, cssDist, options);
+	// cp(cssSrc, cssDist, options);
+	// A non-mapped version of style.min.css
+	gulp.src([cssSrc + '*.min.css', '!' + cssSrc + '*map.css'])
+	    .pipe(gulp.dest(cssDist));
 	// A non-mapped version of uglified.js
 	gulp.src([
 	  	jsSrc + 'utils/*.js',
